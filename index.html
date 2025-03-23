@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vercel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/vercelclone/style.css">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.9"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13"></script>
+  
+    <style></style>
 
 </head>
 <body>
+
+    <div class="grid-overlay"></div>
+
     <!--FOOTER SECTION-->
     <footer class="footer bg-black text-white py-5">
         <div class="container">
@@ -83,5 +85,38 @@
     <!--FOOTER SECTION-->
   
     
+    <div class="container-fluid  main-container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 text-center content-wrapper">
+                <h1 class="main-heading">Your complete platform for the web.</h1>
+                
+                <p class="subtitle">
+                    Vercel provides the developer tools and cloud infrastructure<br>
+                    to build, scale, and secure a faster, more personalized web.
+                </p>
+                
+                <div class="buttons-container">
+                    <a href="#" class="btn btn-light btn-lg start-button">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M12 20V10M18 14l-6-6-6 6"/></svg>
+                        Start Deploying
+                    </a>
+                    <a href="#" class="btn btn-dark btn-lg demo-button">Get a Demo</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="triangle-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 433" width="500" height="433">
+                <defs>
+                  <pattern id="trianglePattern" patternUnits="userSpaceOnUse" width="2" height="2">
+                    <path d="M0,0 L1,0 L0.5,0.866 z" fill="#ffffff" stroke="#ffffff" stroke-width="0.1"/>
+                  </pattern>
+                </defs>
+                <path d="M250,0 L500,433 L0,433 z" fill="url(#trianglePattern)" stroke="#ffffff" stroke-width="0.5"/>
+              </svg>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
