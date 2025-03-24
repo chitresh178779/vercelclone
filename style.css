@@ -1,0 +1,445 @@
+ /* Base styles */
+ body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Grid overlay with gradient background */
+  .grid-overlay {
+    background: #000;
+    background: linear-gradient(143.7deg, 
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(2, 31, 59, 0.95) 30%, 
+      rgba(4, 56, 62, 0.95) 50%,
+      rgba(130, 71, 8, 0.95) 80%,
+      rgba(196, 56, 3, 0.95) 100%);
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  /* Grid lines */
+  .grid-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 7vw 7vw;
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Typography */
+  .main-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+  }
+  
+  .subheading {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+  }
+  
+  /* Buttons */
+  .btn {
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn-light {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 4px 14px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-dark {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Triangle container */
+  .triangle-container {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Triangle with grid pattern */
+  .triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .triangle-pattern {
+    width: 100%;
+    height: 100%;
+    fill: url(#grid-pattern);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 2.5rem;
+    }
+    
+    .subheading {
+      font-size: 1rem;
+    }
+    
+    .triangle-container {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .main-heading {
+      font-size: 4.5rem;
+    }
+  }
+
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Background */
+.dark-mesh {
+    background-color: #000;
+    background-image: 
+        linear-gradient(rgba(20, 20, 20, 0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 20, 20, 0.8) 1px, transparent 1px);
+    background-size: 50px 50px;
+    min-height: 100vh;
+}
+
+/* Typography */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.feature-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.tagline-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+}
+
+.feature-subtext {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.125rem;
+}
+
+.feature-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Feature Panels */
+.feature-panel {
+    height: 100%;
+    background-color: rgba(25, 25, 25, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Console Window */
+.console-window {
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.console-header {
+    background-color: #222;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.console-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.control-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red-dot {
+    background-color: #ff5f56;
+}
+
+.yellow-dot {
+    background-color: #ffbd2e;
+}
+
+.green-dot {
+    background-color: #27c93f;
+}
+
+.console-body {
+    padding: 12px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+pre {
+    margin: 0;
+    color: #ddd;
+}
+
+.prompt-symbol {
+    color: #999;
+}
+
+.directory-text {
+    color: #fff;
+}
+
+.console-output {
+    color: #ddd;
+}
+
+/* Browser Preview */
+.browser-preview {
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.browser-toolbar {
+    background-color: #222;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-align: center;
+    color: #888;
+}
+
+.lock-icon {
+    font-size: 12px;
+}
+
+.browser-content {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.preview-headline {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-weight: bold;
+}
+
+.vercel-logo-triangle {
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L60 60 L0 60 Z' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Chat Interface */
+.chat-interface {
+    padding: 10px;
+}
+
+.message-bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.message-bubble.incoming {
+    background-color: #2a2a2a;
+    align-self: flex-start;
+}
+
+.message-bubble.outgoing {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    align-self: flex-end;
+}
+
+.message-text {
+    font-size: 14px;
+}
+
+.code-text {
+    background-color: #333;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.blue-avatar {
+    background-color: #0070f3;
+}
+
+.red-avatar {
+    background-color: #ff4d4f;
+}
+
+.reaction-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reaction-icon i {
+    color: #000;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .tagline-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .tagline-text {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-heading {
+        font-size: 1.5rem;
+    }
+    
+    .console-body pre {
+        font-size: 12px;
+    }
+    
+    .preview-headline {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .feature-heading {
+        font-size: 1.25rem;
+    }
+    
+    .tagline-text {
+        font-size: 1rem;
+    }
+    
+    .feature-subtext {
+        font-size: 1rem;
+    }
+    
+    .console-body {
+        padding: 8px;
+    }
+    
+    .console-body pre {
+        font-size: 10px;
+    }
+    
+    .preview-headline {
+        font-size: 18px;
+    }
+    
+    .message-bubble {
+        max-width: 90%;
+    }
+}
+
+/* Custom styles for icons */
+.fas.fa-arrow-right-long,
+.fas.fa-arrow-trend-up {
+    font-size: 0.9em;
+}
