@@ -240,7 +240,136 @@
       </div>
     
        <!--Herosection-->
-       
+       <!--Graph-->
+       <div class="analytics-wrapper">
+        <div class="flexbox align-items-center">
+            <span class="title-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                    <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5h-2v12h2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+                </svg>
+            </span>
+            <span>UI Monitoring</span>
+        </div>
+        
+        <h1>Privacy-respecting, lightweight Insights.</h1>
+        <p class="tagline">Enhance your post-release process with insightful, real-time data.</p>
+        
+        <div class="graph-wrapper">
+            <!-- Static SVG replacing the dynamic chart -->
+            <svg class="graph-svg" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Y-axis grid lines -->
+                <line x1="0" y1="50" x2="1000" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="1000" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="150" x2="1000" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="200" x2="1000" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="250" x2="1000" y2="250" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                
+                <!-- Y-axis labels -->
+                <text x="10" y="50" fill="#8a8a8a" font-size="12">4k</text>
+                <text x="10" y="100" fill="#8a8a8a" font-size="12">3k</text>
+                <text x="10" y="150" fill="#8a8a8a" font-size="12">2k</text>
+                <text x="10" y="200" fill="#8a8a8a" font-size="12">1k</text>
+                
+                <!-- Time marker vertical line -->
+                <line x1="750" y1="0" x2="750" y2="300" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                
+                <!-- Blue line (Views) -->
+                <path d="M50,200 L100,175 L150,160 L200,175 L250,150 L300,120 L350,90 L400,60 L450,60 L500,75 L550,80 L600,60 L650,60 L700,40 L750,30" fill="none" stroke="#1e88e5" stroke-width="2.5"/>
+                
+                <!-- Green line (Clicks) -->
+                <path d="M50,225 L100,210 L150,205 L200,200 L250,195 L300,200 L350,195 L400,175 L450,175 L500,190 L550,175 L600,175 L650,180 L700,155 L750,110" fill="none" stroke="#28a745" stroke-width="2.5"/>
+                
+                <!-- Dots at the time marker -->
+                <circle cx="750" cy="30" r="5" fill="#1e88e5"/>
+                <circle cx="750" cy="110" r="5" fill="#28a745"/>
+                
+                <!-- Gradient fills for areas under lines (simplified) -->
+                <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(30,136,229,0.1)"/>
+                    <stop offset="100%" stop-color="rgba(30,136,229,0)"/>
+                </linearGradient>
+                <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(40,167,69,0.1)"/>
+                    <stop offset="100%" stop-color="rgba(40,167,69,0)"/>
+                </linearGradient>
+                
+                <path d="M50,200 L100,175 L150,160 L200,175 L250,150 L300,120 L350,90 L400,60 L450,60 L500,75 L550,80 L600,60 L650,60 L700,40 L750,30 L750,300 L50,300 Z" fill="url(#blueGradient)"/>
+                <path d="M50,225 L100,210 L150,205 L200,200 L250,195 L300,200 L350,195 L400,175 L450,175 L500,190 L550,175 L600,175 L650,180 L700,155 L750,110 L750,300 L50,300 Z" fill="url(#greenGradient)"/>
+            </svg>
+        </div>
+        
+        <div class="flexbox stats-wrapper">
+            <div class="stats-card">
+                <div class="card-label">Impressions</div>
+                <div class="card-value">5,218</div>
+                <div class="percent-rise">+53%</div>
+            </div>
+            <div class="stats-card">
+                <div class="card-label">Actions</div>
+                <div class="card-value">2,005</div>
+                <div class="percent-rise green">+13%</div>
+            </div>
+        </div>
+    </div>
+       <!--Graph-->
+
+       <!--Cards-->
+       <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+            <div class="vrc-section-title">Instant Rollbacks</div>
+            <div class="vrc-headline">Go ahead, deploy on Friday.<br /> Instantly rollback to a working deployment.</div>
+            <div class="vrc-commit-line">
+              <div class="vrc-commit-dot"></div>
+              <div class="vrc-commit-dot"></div>
+              <div class="vrc-commit-item">
+                <div class="vrc-commit-branch">vercel-site/jvjb4ynna <span class="ms-2 small text-secondary">1d ago</span></div>
+                <div class="commit-details">ba5f55f Update bento box design <span class="commit-changes-badge">90</span></div>
+              </div>
+              <div class="vrc-commit-item">
+                <div class="vrc-commit-branch">vercel-site/gigj178pv <span class="ms-2 small text-secondary">10m ago</span></div>
+                <div class="commit-details">bx012mm Fix ESLint error on query <span class="commit-changes-badge">55</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="vrc-section-title">Conformance</div>
+            <div class="vrc-card-container">
+              <div class="vrc-grid-container">
+                <div>
+                  <div class="vrc-section-title">Conformance</div>
+                  <div class="vrc-box"><span>Excellent</span><span class="vrc-score">9.5</span></div>
+                  <div class="vrc-box"><span>Total Issues</span><span><strong>34</strong></span></div>
+                  <div class="vrc-box"><span>Major Issues</span><span><strong>12</strong></span></div>
+                </div>
+                <div>
+                  <div class="vrc-section-title">Code Owners</div>
+                  <div class="vrc-box"><span>@vercel/design</span>
+                    <div class="vrc-avatars">
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" />
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/2.jpg" />
+                    </div>
+                  </div>
+                  <div class="vrc-box"><span>@vercel/eng</span>
+                    <div class="vrc-avatars">
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/4.jpg" />
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/5.jpg" />
+                    </div>
+                  </div>
+                  <div class="vrc-box"><span>@vercel/marketing</span>
+                    <div class="vrc-avatars">
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/8.jpg" />
+                      <img class="vrc-avatar" src="https://randomuser.me/api/portraits/men/9.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!--Cards-->
+
 
     
     <!--FOOTER SECTION-->
